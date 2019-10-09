@@ -25,11 +25,9 @@ namespace ConsoleAdventure.Project.Models
       room2.AddExit(room3);
       room3.AddExit(room2);
 
-      room3.AddExit(room4);
-      room4.AddExit(room3);
+      room3.AddExit(room4);     //dies in room 4
 
-      room3.AddExit(room5);
-      room5.AddExit(room3);
+      room3.AddExit(room5);     //wins in room 5
 
     }
 
