@@ -18,13 +18,26 @@ namespace ConsoleAdventure.Project.Models
       Room room4 = new Room("4", "Room 4");
       Room room5 = new Room("5", "Room 5");
 
+      //relationships between the rooms
+      room1.AddExit(room2);
+      room2.AddExit(room1);
+
+      room2.AddExit(room3);
+      room3.AddExit(room2);
+
+      room3.AddExit(room4);
+      room4.AddExit(room3);
+
+      room3.AddExit(room5);
+      room5.AddExit(room3);
+
     }
 
     //constructor
-    public Game()
-    {
-      Player = new Player();
-      Setup();
-    }
+    // public Game()
+    // {
+    //   Player = new Player();
+    //   Setup();
+    // }
   }
 }
