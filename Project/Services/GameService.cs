@@ -38,8 +38,8 @@ namespace ConsoleAdventure.Project
     }
     public void Help()
     {
-      Console.Clear();
-      Messages.Add("Go - allows you to move to different rooms \nTake - allows you to take an item \nUse - allows you to use an item you have in your inventory \nLook - allows you to look around the room \nQuit - when you give up and want to quit");
+      // Console.Clear();
+      Messages.Add("Go - allows you to move to different rooms \nTake - allows you to take an item \nUse - allows you to use an item you have in your inventory \nLook - allows you to look around the room you are in \nQuit - when you give up and want to quit");
     }
 
     public void Inventory()
@@ -49,7 +49,7 @@ namespace ConsoleAdventure.Project
 
     public void Look()
     {
-      throw new System.NotImplementedException();
+      Messages.Add(_game.CurrentRoom.GetTemplate());
     }
 
     public void Quit()

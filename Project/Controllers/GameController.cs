@@ -28,7 +28,7 @@ namespace ConsoleAdventure.Project.Controllers
     public void GetUserInput()
     {
       Console.WriteLine("What would you like to do?");
-      Console.WriteLine("Go , Look , Help, Quit");
+      Console.WriteLine("Go , Look , Help , Quit");
       string input = Console.ReadLine().ToLower() + " ";
       string command = input.Substring(0, input.IndexOf(" "));
       string option = input.Substring(input.IndexOf(" ") + 1).Trim();

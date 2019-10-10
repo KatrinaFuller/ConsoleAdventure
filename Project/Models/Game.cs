@@ -12,11 +12,11 @@ namespace ConsoleAdventure.Project.Models
     public void Setup()
     {
       //create rooms
-      Room room1 = new Room("1", "Room 1 starting point");
-      Room room2 = new Room("2", "Room 2 second room");
-      Room room3 = new Room("3", "Room 3 third room");
-      Room room4 = new Room("4", "Room 4 you die!");
-      Room room5 = new Room("5", "Room 5 you win!");
+      Room room1 = new Room("1", "starting point");
+      Room room2 = new Room("2", "second room");
+      Room room3 = new Room("3", "third room");
+      Room room4 = new Room("4", "you die!");
+      Room room5 = new Room("5", "you win!");
 
       //relationships between the rooms
       room1.Exits.Add("east", room2);
@@ -30,7 +30,7 @@ namespace ConsoleAdventure.Project.Models
       room3.Exits.Add("south", room5);     //wins in room 5
 
       //items
-      Item flashlight = new Item("flashlight", "You grab the flashlight as you will need it to get through this corn maze so late at night");
+      Item flashlight = new Item("flashlight", "Would you look at that! Just look at it! (You may want to grab this as you will need it to get through this corn maze so late at night)");
 
       //adding item to room
       room1.Items.Add(flashlight);

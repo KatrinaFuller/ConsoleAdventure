@@ -36,6 +36,10 @@ namespace ConsoleAdventure.Project.Models
       {
         template += "\n \t" + exit.Key + " brings you to Room " + exit.Value.Name + Environment.NewLine;
       }
+      foreach (var item in Items)
+      {
+        template += $"Item: \n{item.Name} \t {item.Description} \n";
+      }
       return template;
     }
 
