@@ -8,16 +8,26 @@ namespace ConsoleAdventure
   {
     public static void Main(string[] args)
     {
-      Console.WriteLine("Welcome to the Corn Maze! Press (y)es to play or (n)o to not.");
-      new GameController().Run();
-      // switch ()
-      // {
-      //   case "y":
-      //     break;
-      //   case "n":
+      AskQuestion();
+    }
 
-      //     break;
-      // }
+    public static void AskQuestion()
+    {
+      Console.WriteLine("Welcome to the Corn Maze! Press (Y)es to play or (N)o to not.");
+      switch (Console.ReadLine().ToLower())
+      {
+        case "y":
+          new GameController().Run();
+          break;
+        case "n":
+          Environment.Exit(0);
+          break;
+        default:
+          Console.WriteLine("That is not an option");
+          AskQuestion();
+          break;
+      }
+
     }
   }
 }

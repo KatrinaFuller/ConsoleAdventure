@@ -15,7 +15,7 @@ namespace ConsoleAdventure.Project.Controllers
     //NOTE Makes sure everything is called to finish Setup and Starts the Game loop
     public void Run()
     {
-      Console.Clear();
+      //   Console.Clear();
       InitialSetup();
       while (true)
       {
@@ -54,6 +54,9 @@ namespace ConsoleAdventure.Project.Controllers
 
     public void InitialSetup()
     {
+      Console.WriteLine("What is your name?");
+      _gameService.Setup(Console.ReadLine());
+      //need room to print on console
 
     }
 
