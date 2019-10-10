@@ -19,15 +19,15 @@ namespace ConsoleAdventure.Project.Models
       Room room5 = new Room("5", "Room 5");
 
       //relationships between the rooms
-      room1.AddExit(room2);
-      room2.AddExit(room1);
+      room1.Exits.Add("east", room2);
+      room2.Exits.Add("west", room1);
 
-      room2.AddExit(room3);
-      room3.AddExit(room2);
+      room2.Exits.Add("east", room3);
+      room3.Exits.Add("west", room2);
 
-      room3.AddExit(room4);     //dies in room 4
+      room3.Exits.Add("north", room4);     //dies in room 4
 
-      room3.AddExit(room5);     //wins in room 5
+      room3.Exits.Add("south", room5);     //wins in room 5
 
     }
 

@@ -14,9 +14,18 @@ namespace ConsoleAdventure.Project.Models
 
 
     //methods
-    public void AddExit(IRoom room)
+    public void AddExit(string direction, IRoom room)
     {
-      Exits.Add(room.Name, room);
+      Exits.Add(direction, room);
+    }
+
+    public IRoom Go(string direction)
+    {
+      if (Exits.ContainsKey(direction))
+      {
+        return Exits[direction];
+      }
+      return this;
     }
 
 
