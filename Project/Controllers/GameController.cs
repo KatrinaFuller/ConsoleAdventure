@@ -41,6 +41,21 @@ namespace ConsoleAdventure.Project.Controllers
         case "quit":
           Environment.Exit(0);
           break;
+        case "go":
+          _gameService.Go();
+          break;
+        case "take":
+          _gameService.TakeItem();
+          break;
+        case "use":
+          _gameService.UseItem();
+          break;
+        case "look":
+          _gameService.Look();
+          break;
+        case "help":
+          _gameService.Help();
+          break;
 
       }
 
@@ -49,7 +64,11 @@ namespace ConsoleAdventure.Project.Controllers
     //NOTE this should print your messages for the game.
     private void Print()
     {
-
+      Console.Clear();
+      foreach (var message in _gameService.Messages)
+      {
+        Console.WriteLine(message);
+      }
     }
 
     public void InitialSetup()

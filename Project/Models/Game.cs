@@ -12,7 +12,7 @@ namespace ConsoleAdventure.Project.Models
     public void Setup()
     {
       //create rooms
-      Room room1 = new Room("1", "Room 1");
+      Room room1 = new Room("1", "Room 1 starting point");
       Room room2 = new Room("2", "Room 2");
       Room room3 = new Room("3", "Room 3");
       Room room4 = new Room("4", "Room 4");

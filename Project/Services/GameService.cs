@@ -63,8 +63,8 @@ namespace ConsoleAdventure.Project
 
     public void Setup(string playerName)
     {
-      IRoom room1 = new Room("room1", "description");
-
+      Messages.Add($"You are now in Room {_game.CurrentRoom.Name}");
+      Messages.Add(_game.CurrentRoom.GetTemplate());
 
     }
     ///<summary>When taking an item be sure the item is in the current room before adding it to the player inventory, Also don't forget to remove the item from the room it was picked up in</summary>
