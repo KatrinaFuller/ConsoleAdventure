@@ -30,10 +30,11 @@ namespace ConsoleAdventure.Project
       //if failing to go anywhere
       if (from == to)
       {
-        Messages.Add("Invalid direction");
+        Messages.Add("Nope, trust me, you do not want to go this way");
         return;
       }
       Messages.Add($"You have left Room {from} and are now in Room {to}");
+      Messages.Add(_game.CurrentRoom.GetTemplate());
     }
     public void Help()
     {

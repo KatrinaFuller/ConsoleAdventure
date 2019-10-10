@@ -31,10 +31,10 @@ namespace ConsoleAdventure.Project.Models
 
     public string GetTemplate()
     {
-      string template = $"Room: {Name} \n {Description}";
+      string template = $"Room: {Name} \n {Description}\n";
       foreach (var exit in Exits)
       {
-        template += "\t" + exit.Key + " brings you to " + exit.Value.Name + Environment.NewLine;
+        template += "\n \t" + exit.Key + " brings you to Room " + exit.Value.Name + Environment.NewLine;
       }
       return template;
     }
