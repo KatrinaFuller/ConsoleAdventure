@@ -28,6 +28,7 @@ namespace ConsoleAdventure.Project.Controllers
     public void GetUserInput()
     {
       Console.WriteLine("What would you like to do?");
+      Console.WriteLine("(L)ook , (H)elp, (Q)uit");
       string input = Console.ReadLine().ToLower() + " ";
       string command = input.Substring(0, input.IndexOf(" "));
       string option = input.Substring(input.IndexOf(" ") + 1).Trim();
@@ -41,18 +42,24 @@ namespace ConsoleAdventure.Project.Controllers
         case "quit":
           Environment.Exit(0);
           break;
+        case "g":
         case "go":
-          _gameService.Go();
+          Console.WriteLine("Which direction would you like to go?");
+          _gameService.Go(option);
           break;
+        case "t":
         case "take":
-          _gameService.TakeItem();
+          _gameService.TakeItem(option);
           break;
+        case "u":
         case "use":
-          _gameService.UseItem();
+          _gameService.UseItem(option);
           break;
+        case "l":
         case "look":
           _gameService.Look();
           break;
+        case "h":
         case "help":
           _gameService.Help();
           break;

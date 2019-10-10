@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using ConsoleAdventure.Project.Interfaces;
 using ConsoleAdventure.Project.Models;
@@ -36,7 +37,8 @@ namespace ConsoleAdventure.Project
     }
     public void Help()
     {
-      throw new System.NotImplementedException();
+      Console.Clear();
+      Messages.Add("Go - allows you to move to different rooms \nTake - allows you to take an item \nUse - allows you to use an item you have in your inventory \nLook - allows you to look around the room \nQuit - when you give up and want to quit");
     }
 
     public void Inventory()
