@@ -29,13 +29,22 @@ namespace ConsoleAdventure.Project.Models
 
       room3.Exits.Add("south", room5);     //wins in room 5
 
+      //items
+      Item flashlight = new Item("flashlight", "You grab the flashlight as you will need it to get through this corn maze so late at night");
+
+      //adding item to room
+      room1.Items.Add(flashlight);
+
+      //starting room
+      CurrentRoom = room1;
+
     }
 
-    //constructor
-    // public Game()
-    // {
-    //   Player = new Player();
-    //   Setup();
-    // }
+    // constructor
+    public Game()
+    {
+      CurrentPlayer = new Player();
+      Setup();
+    }
   }
 }
