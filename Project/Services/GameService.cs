@@ -21,7 +21,18 @@ namespace ConsoleAdventure.Project
     //methods
     public void Go(string direction)
     {
-      throw new System.NotImplementedException();
+      //changing rooms
+      string from = _game.CurrentRoom.Name;
+      _game.CurrentRoom = _game.CurrentRoom.Go(direction);
+      string to = _game.CurrentRoom.Name;
+
+      //if failing to go anywhere
+      if (from == to)
+      {
+        Messages.Add("Invalid direction");
+        return;
+      }
+      Messages.Add($"You have left {from} and are now in {to}");
     }
     public void Help()
     {
