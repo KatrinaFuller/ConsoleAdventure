@@ -33,7 +33,7 @@ namespace ConsoleAdventure.Project
         Messages.Add("Invalid direction");
         return;
       }
-      Messages.Add($"You have left {from} and are now in {to}");
+      Messages.Add($"You have left Room {from} and are now in Room {to}");
     }
     public void Help()
     {

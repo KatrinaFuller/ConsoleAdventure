@@ -76,6 +76,7 @@ namespace ConsoleAdventure.Project.Controllers
       {
         Console.WriteLine(message);
       }
+      _gameService.Messages.Clear();
     }
 
     public void InitialSetup()
