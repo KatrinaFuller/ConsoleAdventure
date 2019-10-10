@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using ConsoleAdventure.Project.Interfaces;
 
@@ -26,6 +27,16 @@ namespace ConsoleAdventure.Project.Models
         return Exits[direction];
       }
       return this;
+    }
+
+    public string GetTemplate()
+    {
+      string template = $"Room: {Name} \n {Description}";
+      foreach (var exit in Exits)
+      {
+        template += "\t" + exit.Key + " brings you to " + exit.Value.Name + Environment.NewLine;
+      }
+      return template;
     }
 
 
