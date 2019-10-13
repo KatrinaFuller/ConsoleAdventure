@@ -68,7 +68,7 @@ namespace ConsoleAdventure.Project
 
     public void Quit()
     {
-      throw new System.NotImplementedException();
+      Environment.Exit(0);
     }
     ///<summary>
     ///Restarts the game 
