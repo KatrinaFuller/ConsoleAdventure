@@ -13,13 +13,15 @@ namespace ConsoleAdventure
 
     public static void AskQuestion()
     {
-      Console.WriteLine("Welcome to the Corn Maze! Press (Y)es to play or (N)o to not.");
+      Console.WriteLine("Welcome to the Corn Maze! Press (Y)es to play or (N)o because you are too scared");
       switch (Console.ReadLine().ToLower())
       {
         case "y":
+        case "yes":
           new GameController().Run();
           break;
         case "n":
+        case "no":
           Environment.Exit(0);
           break;
         default:

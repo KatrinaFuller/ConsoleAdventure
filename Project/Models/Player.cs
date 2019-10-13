@@ -10,10 +10,10 @@ namespace ConsoleAdventure.Project.Models
     public List<Item> Inventory { get; set; }
 
     //constructor
-    // public Player(string name)
-    // {
-    //   Name = name;
-    //   Inventory = new List<Item>();
-    // }
+    public Player()
+    {
+      Name = Name;
+      Inventory = new List<Item>();
+    }
   }
 }

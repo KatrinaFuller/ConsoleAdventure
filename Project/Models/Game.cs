@@ -30,7 +30,7 @@ namespace ConsoleAdventure.Project.Models
       room3.Exits.Add("south", room5);     //wins in room 5
 
       //items
-      Item flashlight = new Item("flashlight", "Would you look at that! Just look at it! (You may want to grab this as you will need it to get through this corn maze so late at night)");
+      Item flashlight = new Item("flashlight", "Would you look at that! Just look at it!");
 
       //adding item to room
       room1.Items.Add(flashlight);

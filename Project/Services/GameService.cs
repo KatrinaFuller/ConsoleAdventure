@@ -73,8 +73,29 @@ namespace ConsoleAdventure.Project
     ///<summary>When taking an item be sure the item is in the current room before adding it to the player inventory, Also don't forget to remove the item from the room it was picked up in</summary>
     public void TakeItem(string itemName)
     {
-      throw new System.NotImplementedException();
+
+      //check if an item in the room
+      if (_game.CurrentRoom.Items.Count == 0)
+      {
+        Messages.Add("There are no items in this room for you to take.");
+        return;
+      }
+
+      //check if named an actual item that is in the room
+      foreach (Item item in _game.CurrentRoom.Items)
+      {
+        if (item.Name == itemName)
+        {
+          Messages.Add($"You grabbed the {itemName}");
+          //once item is taken, that item is removed from the room
+          _game.CurrentPlayer.Inventory.Add(item);
+          _game.CurrentRoom.Items.Remove(item);
+          return;
+        }
+      }
+      Messages.Add("The item you have entered is not in this room.");
     }
+
     ///<summary>
     ///No need to Pass a room since Items can only be used in the CurrentRoom
     ///Make sure you validate the item is in the room or player inventory before
