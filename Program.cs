@@ -13,7 +13,7 @@ namespace ConsoleAdventure
 
     public static void AskQuestion()
     {
-      Console.WriteLine("Welcome to the Corn Maze! Press (Y)es to play or (N)o because you are too scared");
+      Console.WriteLine("Jigsaw's House \nPress (Y)es to play or (N)o because you are too scared");
       switch (Console.ReadLine().ToLower())
       {
         case "y":

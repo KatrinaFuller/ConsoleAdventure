@@ -15,15 +15,15 @@ namespace ConsoleAdventure.Project.Models
       UsingFlashlight = false;
 
       //create rooms
-      Room room1 = new Room("1", "starting point");
-      Room room2 = new Room("2", "second room");
-      Room room3 = new Room("3", "third room");
-      Room room4 = new Room("4", "fourth room");
-      Room room5 = new Room("5", "fifth room");
-      Room room6 = new Room("6", "Death has fallen upon you");
-      Room room7 = new Room("7", "seventh room");
-      Room room8 = new Room("8", "eighth room");
-      Room room9 = new Room("9", "You win!");
+      Room room1 = new Room("1", "You wake up in a room you have never seen before. A TV comes on and it's Jigsaw telling you he wants to play a game. He has stuck you in this house and there is only one way out. He ends by saying 'Choose wisely which way to go or you will face a certain death.'");
+      Room room2 = new Room("2", "Your only way is to go down this creepy hallway");
+      Room room3 = new Room("3", "You have made it to the end of the hallway, but are now faced with opposite ways to go. Choose wisely......");
+      Room room4 = new Room("4", "You are getting so scared walking down this way and wondering if you made the right choice. It's not too late to turn back now.");
+      Room room5 = new Room("5", "As you come around the corner you see lots of blood. But you are curious to see what it is coming from.");
+      Room room6 = new Room("6", "As you enter this room you hit a trip wire and a blade comes down and chops your head off. \nDeath has fallen upon you!");
+      Room room7 = new Room("7", "You are getting so scared walking down this way and wondering if you made the right choice. It's not too late to turn back now.");
+      Room room8 = new Room("8", "You think you see some light but are not sure if your mind is just playing tricks on you.");
+      Room room9 = new Room("9", "You have escaped! But unfortunately for someone else, Jigsaw is now on to his next victum.");
 
       //relationships between the rooms
       room1.Exits.Add("east", room2);
