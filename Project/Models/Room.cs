@@ -29,13 +29,38 @@ namespace ConsoleAdventure.Project.Models
       return this;
     }
 
-    public string GetTemplate()
+    // public string GetTemplate()
+    // {
+    //   string template = $"Room: {Name} \n {Description}\n";
+
+    //   foreach (var exit in Exits)
+    //   {
+    //     template += "\n \t" + exit.Key + " brings you to Room " + exit.Value.Name + Environment.NewLine;
+    //   }
+    //   foreach (var item in Items)
+    //   {
+    //     template += $"Item: \n{item.Name} \t {item.Description} \n";
+    //   }
+    //   return template;
+    // }
+
+    public string GetTemplate(IGame _game)
     {
       string template = $"Room: {Name} \n {Description}\n";
+
       foreach (var exit in Exits)
       {
         template += "\n \t" + exit.Key + " brings you to Room " + exit.Value.Name + Environment.NewLine;
       }
+
+
+      //if not rooms 1 or 2 and no flashlight is on, do now show directions on where you can go
+      if (!_game.CurrentRoom.Name == room1 || !_game.CurrentRoom.Name == room2)
+      {
+
+      }
+
+
       foreach (var item in Items)
       {
         template += $"Item: \n{item.Name} \t {item.Description} \n";

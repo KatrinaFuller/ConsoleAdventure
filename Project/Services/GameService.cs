@@ -34,7 +34,7 @@ namespace ConsoleAdventure.Project
         return;
       }
       Messages.Add($"You have left Room {from} and are now in Room {to}");
-      Messages.Add(_game.CurrentRoom.GetTemplate());
+      Messages.Add(_game.CurrentRoom.GetTemplate(_game));
     }
     public void Help()
     {
@@ -49,7 +49,7 @@ namespace ConsoleAdventure.Project
 
     public void Look()
     {
-      Messages.Add(_game.CurrentRoom.GetTemplate());
+      Messages.Add(_game.CurrentRoom.GetTemplate(_game));
     }
 
     public void Quit()
@@ -67,7 +67,7 @@ namespace ConsoleAdventure.Project
     public void Setup(string playerName)
     {
       Messages.Add($"You are now in Room {_game.CurrentRoom.Name}");
-      Messages.Add(_game.CurrentRoom.GetTemplate());
+      Messages.Add(_game.CurrentRoom.GetTemplate(_game));
 
     }
     ///<summary>When taking an item be sure the item is in the current room before adding it to the player inventory, Also don't forget to remove the item from the room it was picked up in</summary>

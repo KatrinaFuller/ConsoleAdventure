@@ -12,6 +12,6 @@ namespace ConsoleAdventure.Project.Interfaces
 
     IRoom Go(string direction);
 
-    string GetTemplate();
+    string GetTemplate(IGame _game);
   }
 }
