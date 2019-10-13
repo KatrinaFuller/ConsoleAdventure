@@ -20,10 +20,10 @@ namespace ConsoleAdventure.Project.Models
       Room room3 = new Room("3", "third room");
       Room room4 = new Room("4", "fourth room");
       Room room5 = new Room("5", "fifth room");
-      Room room6 = new Room("6", "die room");
+      Room room6 = new Room("6", "Death has fallen upon you");
       Room room7 = new Room("7", "seventh room");
       Room room8 = new Room("8", "eighth room");
-      Room room9 = new Room("9", "win room");
+      Room room9 = new Room("9", "You win!");
 
       //relationships between the rooms
       room1.Exits.Add("east", room2);

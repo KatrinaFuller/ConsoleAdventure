@@ -67,6 +67,10 @@ namespace ConsoleAdventure.Project.Controllers
         case "inventory":
           _gameService.Inventory();
           break;
+        case "r":
+        case "reset":
+          _gameService.Reset();
+          break;
 
       }
 

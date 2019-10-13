@@ -39,7 +39,7 @@ namespace ConsoleAdventure.Project
     public void Help()
     {
       // Console.Clear();
-      Messages.Add("Go - allows you to move to different rooms \nTake - allows you to take an item \nUse - allows you to use an item you have in your inventory \nLook - allows you to look around the room you are in \nInventory - allows you to see what you have in your inventory \nQuit - when you give up and want to quit");
+      Messages.Add("Go (direction) - allows you to move to different rooms \nTake (item) - allows you to take an item \nUse (item) - allows you to use an item you have in your inventory \nLook - allows you to look around the room you are in \nInventory - allows you to see what you have in your inventory \nReset - puts you back to the beginning and you start over with no items \nQuit - when you give up and want to quit");
     }
 
     public void Inventory()
@@ -75,7 +75,9 @@ namespace ConsoleAdventure.Project
     ///</summary>
     public void Reset()
     {
-      throw new System.NotImplementedException();
+      _game = new Game();
+      Messages = new List<string>();
+      Messages.Add($"Game has been reset");
     }
 
     public void Setup(string playerName)
@@ -126,8 +128,14 @@ namespace ConsoleAdventure.Project
           //if yes and a flashlight, change using bool to true
           //if use it a second time change to false
           _game.UsingFlashlight = !_game.UsingFlashlight;
-          Messages.Add($"The flashlight is now {_game.UsingFlashlight}");
-
+          if (_game.UsingFlashlight)
+          {
+            Messages.Add($"The flashlight is now on");
+          }
+          else
+          {
+            Messages.Add("The flashlight is off");
+          }
         }
       }
     }
