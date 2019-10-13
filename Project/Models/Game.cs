@@ -15,8 +15,12 @@ namespace ConsoleAdventure.Project.Models
       Room room1 = new Room("1", "starting point");
       Room room2 = new Room("2", "second room");
       Room room3 = new Room("3", "third room");
-      Room room4 = new Room("4", "you die!");
-      Room room5 = new Room("5", "you win!");
+      Room room4 = new Room("4", "fourth room");
+      Room room5 = new Room("5", "fifth room");
+      Room room6 = new Room("6", "die room");
+      Room room7 = new Room("7", "seventh room");
+      Room room8 = new Room("8", "eighth room");
+      Room room9 = new Room("9", "win room");
 
       //relationships between the rooms
       room1.Exits.Add("east", room2);
@@ -25,9 +29,24 @@ namespace ConsoleAdventure.Project.Models
       room2.Exits.Add("east", room3);
       room3.Exits.Add("west", room2);
 
-      room3.Exits.Add("north", room4);     //dies in room 4
+      room3.Exits.Add("north", room4);
+      room4.Exits.Add("south", room3);
 
-      room3.Exits.Add("south", room5);     //wins in room 5
+      room4.Exits.Add("west", room5);
+      room5.Exits.Add("east", room4);
+
+      room5.Exits.Add("west", room6); //dies in room 6
+
+      room3.Exits.Add("south", room7);
+      room7.Exits.Add("north", room3);
+
+      room7.Exits.Add("west", room8);
+      room8.Exits.Add("east", room7);
+
+      room8.Exits.Add("west", room9); //wins in room 9
+
+
+
 
       //items
       Item flashlight = new Item("flashlight", "Would you look at that! Just look at it!");
