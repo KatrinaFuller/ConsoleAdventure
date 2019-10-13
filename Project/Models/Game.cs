@@ -7,10 +7,13 @@ namespace ConsoleAdventure.Project.Models
 
     public IRoom CurrentRoom { get; set; }
     public IPlayer CurrentPlayer { get; set; }
+    public bool UsingFlashlight { get; set; }
 
     //NOTE Make yo rooms here...
     public void Setup()
     {
+      UsingFlashlight = false;
+
       //create rooms
       Room room1 = new Room("1", "starting point");
       Room room2 = new Room("2", "second room");

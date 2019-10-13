@@ -103,7 +103,19 @@ namespace ConsoleAdventure.Project
     ///</summary>
     public void UseItem(string itemName)
     {
-      throw new System.NotImplementedException();
+
+      foreach (Item item in _game.CurrentPlayer.Inventory)
+      {
+        //check if player has an item
+        if (item.Name == itemName)
+        {
+          //if yes and a flashlight, change using bool to true
+          //if use it a second time change to false
+          _game.UsingFlashlight = !_game.UsingFlashlight;
+          Messages.Add($"The flashlight is now {_game.UsingFlashlight}");
+
+        }
+      }
     }
   }
 }
