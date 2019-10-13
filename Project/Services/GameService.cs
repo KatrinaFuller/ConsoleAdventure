@@ -39,12 +39,26 @@ namespace ConsoleAdventure.Project
     public void Help()
     {
       // Console.Clear();
-      Messages.Add("Go - allows you to move to different rooms \nTake - allows you to take an item \nUse - allows you to use an item you have in your inventory \nLook - allows you to look around the room you are in \nQuit - when you give up and want to quit");
+      Messages.Add("Go - allows you to move to different rooms \nTake - allows you to take an item \nUse - allows you to use an item you have in your inventory \nLook - allows you to look around the room you are in \nInventory - allows you to see what you have in your inventory \nQuit - when you give up and want to quit");
     }
 
     public void Inventory()
     {
-      throw new System.NotImplementedException();
+      // if nothing in inventory
+      if (_game.CurrentPlayer.Inventory.Count == 0)
+      {
+        Messages.Add("You have nothing in your inventory");
+      }
+
+      // if player has an item in their inventory show them what they have
+      foreach (Item item in _game.CurrentPlayer.Inventory)
+      {
+        if (_game.CurrentPlayer.Inventory.Count > 0)
+        {
+          Messages.Add($"You have a {item.Name}");
+        }
+
+      };
     }
 
     public void Look()

@@ -63,6 +63,10 @@ namespace ConsoleAdventure.Project.Controllers
         case "help":
           _gameService.Help();
           break;
+        case "i":
+        case "inventory":
+          _gameService.Inventory();
+          break;
 
       }
 
